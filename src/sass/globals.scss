@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.14s ease;
+  scroll-behavior: smooth;
+}
+
+.underline-hover{
+  position: relative;
+}
+
+.underline-hover::after{
+  content: '';
+  position: absolute;
+  width: 80%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2563eb;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.underline-hover:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
