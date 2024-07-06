@@ -4,7 +4,14 @@ import {
   Sansita,
   Lexend_Deca,
   Lexend_Giga,
+  Raleway
 } from "next/font/google";
+
+const raleway = Raleway({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-raleway",
+});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,4 +37,4 @@ const lexendDeca = Lexend_Deca({
   variable: "--font-lexend-deca",
 });
 
-export { inter, poppins, sansita, lexendDeca };
+export { inter, poppins, sansita, lexendDeca , raleway};

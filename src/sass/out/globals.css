@@ -33,4 +33,8 @@ body {
 .underline-hover:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.thick-bordering {
+  border: 0.3px solid;
 }/*# sourceMappingURL=globals.css.map */
