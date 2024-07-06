@@ -134,7 +134,7 @@ const SharedNavbar = () => {
           </div>
           <div className="onboarder">
             <Button
-            className="rounded-none text-white"
+            className="rounded-none bg-black text-white dark:bg-white dark:text-black"
             size="sm"
             >
               Get in touch &rarr;
