@@ -5,7 +5,7 @@ import React from "react";
 const index = () => {
   return (
     <React.Fragment>
-      <section className="max-h-screen h-auto w-full ">
+      <section className="max-h-screen h-auto w-full">
        
       </section>
     </React.Fragment>

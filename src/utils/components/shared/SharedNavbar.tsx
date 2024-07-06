@@ -42,19 +42,19 @@ const ViewWorkPane = () => {
   return (
     <React.Fragment>
        <motion.div className={`${viewOnclick ? "block" : "hidden"} fixed  h-screen w-full bg-rose-500`}>
-          Jack i'm here
+          Jack im here
         </motion.div>
       <Tooltip
         content="Our projects"
         showArrow
         classNames={{
           content: [
-            "bg-gradient-to-r from-[#2563eb] to-blue-800 text-white animation-pulse font-semibold ",
+            "bg-gradient-to-r from-white to-gray-800 text-white animation-pulse font-semibold ",
           ],
         }}
       >
         <Button
-          className="bg-[#2563eb] text-white dark:bg-transparent dark:border-gray-500 border-[1.5px] shadow-md"
+          className="from-white to-gray-800 dark:bg-transparent dark:border-gray-500 border-[1.5px] shadow-md"
           size="sm"
           isIconOnly
           onClick={() => setViewOnclick(!viewOnclick)}
