@@ -36,5 +36,3 @@ yarn-error.log*
 next-env.d.ts
 
 
-# sanity cli ignorance
-/server/sanity
