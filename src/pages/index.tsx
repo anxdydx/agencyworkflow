@@ -60,6 +60,7 @@ const index = () => {
               <hr className="w-24 float-right -rotate-45 border-black dark:border-white" />
               <div className="image-pane mt-4">
                 <img
+                data-aos="fade-up"
                   src="/important/shoots/something.jpg"
                   alt=""
                   className="w-full h-full object-cover light:hidden"
@@ -101,6 +102,8 @@ const index = () => {
               <img
                 src="/important/shoots/som.jpg"
                 alt=""
+                data-aos="fade-up"
+                data-aos-duration="2000"
                 className="absolute top-0 left-0 w-full h-full object-cover"
               />
               <div className="image-anchor h-8 w-4 dark:bg-white absolute -top-3 -right-2 bg-black rotate-180" />
@@ -135,10 +138,12 @@ const index = () => {
           <div className="container imagery-text h-inherit text-center items-center justify-center flex flex-col overflow-x-hidden relative py-[2rem] w-full">
             <img
               src="/images/textures/lens-broke.jpg"
+              data-aos="fade-right"
+              data-aos-duration="2000"
               className="absolute top-0 left-0 w-full h-full object-cover -z-20"
               alt=""
             />
-            <h1 className="text-8xl font-extrabold uppercase text-white ">
+            <h1 className="text-8xl font-extrabold uppercase text-white" data-aos="fade-down">
               The age of video editing
             </h1>
           </div>

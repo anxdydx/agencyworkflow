@@ -72,7 +72,7 @@ const SharedNavbar = () => {
   const { setTheme, theme } = useTheme();
   const navigateLink = [
     { name: "Home", href: "/", icon: <GoHome /> },
-    { name: "Our work", href: "/", icon: <GoIssueTracks /> },
+    { name: "Our work", href: "/route/ourwork", icon: <GoIssueTracks /> },
     { name: "Our services", href: "/", icon: <GoRepoPush /> },
     { name: "Testimonials", href: "/", icon: <GoSmiley /> },
     { name: "Download brochure", href: "/", icon: <FaArrowRight /> },
