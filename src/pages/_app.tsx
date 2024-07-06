@@ -9,7 +9,8 @@ import 'aos/dist/aos.css'
 import {FaFacebookSquare, FaGoogle, FaInstagram, FaLinkedin} from 'react-icons/fa'
 import {useEffect} from 'react'
 import {useTheme} from 'next-themes'
-import WorkingBanner from '@/utils/components/shared/WorkingBanner'
+import {useRouter} from 'next/router'
+import {motion, AnimatePresence} from 'framer-motion'
 
 function SocialMediaIcons() {
   const {theme} = useTheme()
@@ -50,15 +51,36 @@ export default function App({Component, pageProps: {session, ...pageProps}}: App
       once: false,
     })
   }, [])
+  const router = useRouter()
   return (
     <>
       <SessionProvider session={session}>
         <RootProvider>
-          <div className={`${inter.className} `} suppressHydrationWarning>
-            <SharedNavbar />
-            <Component {...pageProps} />
-            <SocialMediaIcons />
-          </div>
+          <AnimatePresence mode='wait'>
+            <motion.div
+              key={router.pathname}
+              className={`${inter.className} `}
+              suppressHydrationWarning
+            >
+              <SharedNavbar />
+              <Component {...pageProps} />
+              <SocialMediaIcons />
+              <motion.div
+                className="slide-in"
+                initial={{scaleY: 0}}
+                animate={{scaleY: 0}}
+                exit={{scaleY: 1}}
+                transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
+              />
+              <motion.div
+                className="slide-out"
+                initial={{scaleY: 1}}
+                animate={{scaleY:0}}
+                exit={{scaleY: 0}}
+                transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
+               />
+            </motion.div>
+          </AnimatePresence>
         </RootProvider>
       </SessionProvider>
     </>
