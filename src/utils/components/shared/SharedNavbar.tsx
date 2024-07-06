@@ -80,7 +80,7 @@ const SharedNavbar = () => {
     <React.Fragment>
       <Navbar
         position="sticky"
-        className=" bg-transparent "
+        className="bg-transparent "
         isBlurred={false}
       >
         <NavbarMenuToggle className="hidden max-[1100px]:block" />

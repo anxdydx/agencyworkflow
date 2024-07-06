@@ -85,6 +85,7 @@ const index = () => {
           </div>
         </div>
       </section>
+      <section className='h-32'></section>
     </React.Fragment>
   )
 }
