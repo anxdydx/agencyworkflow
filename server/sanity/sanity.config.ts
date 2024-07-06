@@ -6,7 +6,6 @@ import {schemaTypes} from './schemaTypes'
 export default defineConfig({
   name: 'default',
   title: 'agencyworkflow',
-
   projectId: '10rgxku1',
   dataset: 'production',
 
