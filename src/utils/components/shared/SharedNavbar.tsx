@@ -9,6 +9,7 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   Tooltip,
+  Switch,
 } from "@nextui-org/react";
 import React from "react";
 import Link from "next/link";
@@ -127,6 +128,9 @@ const SharedNavbar = () => {
           </NavbarMenu>
           <div className="theme-change">
             {/* //workpane modal */}
+          </div>
+          <div className="switch">
+            <Switch size="sm" color="default" classNames={{ label: "text-white" }} onClick={() => setTheme(theme === "light" ? "dark" : "light")} />
           </div>
           <div className="onboarder">
             <Button
