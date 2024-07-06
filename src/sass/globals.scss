@@ -9,6 +9,9 @@
   transition: all 0.14s ease;
   scroll-behavior: smooth;
 }
+body{
+  overflow-x: hidden;
+}
 
 .underline-hover{
   position: relative;
@@ -30,3 +33,4 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+

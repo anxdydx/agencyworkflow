@@ -6,15 +6,66 @@ import {
   NavbarContent,
   NavbarItem,
   Button,
-  Avatar,
   NavbarMenuToggle,
   NavbarMenu,
+  Tooltip,
 } from "@nextui-org/react";
 import React from "react";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { useTheme } from "next-themes";
 import { GoHome, GoRepoPush, GoSmiley, GoIssueTracks } from "react-icons/go";
+import { motion } from "framer-motion";
+import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi";
+import { AiFillSmile } from "react-icons/ai";
+
+const ChangeTheme = () => {
+  const { setTheme, theme } = useTheme();
+  return (
+    <Button
+      size="sm"
+      isIconOnly
+      className="    shadow-md text-white"
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+    >
+      {theme === "light" ? (
+        <HiOutlineSun className="text-lg text-black" />
+      ) : (
+        <HiOutlineMoon className="text-lg" />
+      )}
+    </Button>
+  );
+};
+
+const ViewWorkPane = () => {
+  const [viewOnclick, setViewOnclick] = React.useState(false);
+  return (
+    <React.Fragment>
+       <motion.div className={`${viewOnclick ? "block" : "hidden"} fixed  h-screen w-full bg-rose-500`}>
+          Jack i'm here
+        </motion.div>
+      <Tooltip
+        content="Our projects"
+        showArrow
+        classNames={{
+          content: [
+            "bg-gradient-to-r from-[#2563eb] to-blue-800 text-white animation-pulse font-semibold ",
+          ],
+        }}
+      >
+        <Button
+          className="bg-[#2563eb] text-white dark:bg-transparent dark:border-gray-500 border-[1.5px] shadow-md"
+          size="sm"
+          isIconOnly
+          onClick={() => setViewOnclick(!viewOnclick)}
+        >
+          <AiFillSmile className="text-lg text-white" />
+        </Button>
+      </Tooltip>
+       
+    </React.Fragment>
+  );
+};
 
 const SharedNavbar = () => {
   const { setTheme, theme } = useTheme();
@@ -27,7 +78,11 @@ const SharedNavbar = () => {
   ];
   return (
     <React.Fragment>
-      <Navbar position="sticky">
+      <Navbar
+        position="sticky"
+        className=" bg-transparent "
+        isBlurred={false}
+      >
         <NavbarMenuToggle className="hidden max-[1100px]:block" />
         <NavbarBrand className="mt-1">
           <AcmeLogo />
@@ -71,16 +126,12 @@ const SharedNavbar = () => {
             </div>
           </NavbarMenu>
           <div className="theme-change">
-            <Avatar
-              size="sm"
-              className="cursor-pointer"
-              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            />
+            {/* //workpane modal */}
           </div>
           <div className="onboarder">
             <Button
-              className="dark:bg-[#2563eb] bg-[#2563eb]   shadow-md text-white "
-              size="sm"
+            className="rounded-none text-white"
+            size="sm"
             >
               Get in touch &rarr;
             </Button>
