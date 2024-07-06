@@ -73,8 +73,8 @@ const SharedNavbar = () => {
   const navigateLink = [
     { name: "Home", href: "/", icon: <GoHome /> },
     { name: "Our work", href: "/route/ourwork", icon: <GoIssueTracks /> },
-    { name: "Our services", href: "/", icon: <GoRepoPush /> },
-    { name: "Testimonials", href: "/", icon: <GoSmiley /> },
+    { name: "Our services", href: "/route/ourservices", icon: <GoRepoPush /> },
+    { name: "Testimonials", href: "/route/testimonials", icon: <GoSmiley /> },
     { name: "Download brochure", href: "/", icon: <FaArrowRight /> },
   ];
   return (
