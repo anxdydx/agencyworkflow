@@ -16,7 +16,7 @@ const IndexParallaxThree = () => {
   const scaleTransformNine = useTransform(scrollYProgress, [0, 1], [1, 9])
   const scaleTransformTen = useTransform(scrollYProgress, [0, 1], [1, 10])
 
-  const inverseOpacity = useTransform(scrollYProgress, [0.2, 1], [0.2, 1])
+  const inverseOpacity = useTransform(scrollYProgress, [0.2, 1], [0.5, 1])
   const pictures = [
     {source: '/important/shoots/steve.jpg', scale: scaleTransformFour},
     {source: '/important/shoots/cam.jpg', scale: scaleTransformTen},
@@ -24,7 +24,7 @@ const IndexParallaxThree = () => {
     {source: '/important/shoots/image.jpg', scale: scaleTransformNine},
     {source: '/important/shoots/som.jpg', scale: scaleTransformFour},
     {source: '/important/shoots/somes.jpg', scale: scaleTransformEight},
-    {source: '/important/shoots/something.jpg', scale: scaleTransformTwo},
+    {source: '/important/shoots/something.jpg', scale: scaleTransformEight},
   ]
   return (
     <div className="parallax-container" ref={parallaxContainer}>
