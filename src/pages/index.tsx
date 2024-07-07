@@ -2,7 +2,7 @@ import {Button} from '@nextui-org/react'
 import Image from 'next/image'
 import React from 'react'
 import {motion} from 'framer-motion'
-import {lexendDeca, raleway} from '@/utils/fonts'
+import {lexendDeca, quicksand, raleway} from '@/utils/fonts'
 import IndexParallaxThree from '@/utils/components/animated/IndexParallaxThree'
 
 const index = () => {
@@ -140,16 +140,53 @@ const index = () => {
           <IndexParallaxThree />
         </div>
       </section>
-      <section className="who-we-are mt-8 relative h-screen text-white ">
-        <Image
-          src="/images/textures/kitwave.jpg"
-          className="-z-20 absolute top-0 left-0 w-full h-full object-cover"
-          fill
-          alt=""
-        />
-        <div className="text-container px-12 py-8 inset-2">
-          <h1 className="text-5xl uppercase font-extrabold">What we do ?</h1>
+      <section className="h-auto py-6 w-full text-center items-center justify-center bg-black dark:bg-white">
+        <h1 className="text-6xl font-extrabold uppercase text-white dark:text-black">
+          Personal brand management
+        </h1>
+      </section>
+      <section className="who-we-are container  mt-8 relative h-screen ">
+        <div className="pointer-circle w-12 h-12 absoute mb-2  top-0 left-0 bg-black dark:bg-white" />
+        <div className="grid grid-cols-6">
+          <div className="col-span-4">
+            <div className="text-pane">
+              <h1 className="uppercase text-5xl font-extrabold">About agenflow</h1>
+              <div className="description-text w-[70%] mt-5">
+                <p className={`${quicksand.className} text-lg  font-medium  `}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium soluta rem
+                  iure corporis, molestias nulla accusantium labore obcaecati maiores, repudiandae
+                  unde architecto enim molestiae voluptatibus deleniti odio recusandae sed
+                  perspiciatis.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col-span-2">
+            <div className="image-container relative h-48 w-full">
+              <Image
+                src={'/images/textures/kitwave.jpg'}
+                className="w-full h-full absolute top-0 left-0 object-cover"
+                width={400}
+                height={800}
+                alt=""
+              />
+            </div>
+            <div className="image-pane-more bg-cyan-500 h-96 relative mt-5 w-full">
+              <Image
+                src={'/images/textures/texture-wave.jpg'}
+                className="w-full h-full absolute top-0 left-0 object-cover"
+                width={400}
+                height={800}
+                alt=""
+              />
+            </div>
+          </div>
         </div>
+      </section>
+      <br />
+    
+      <section className='3d models'>
+        <h1>Attractive 3d models to build</h1>
       </section>
     </React.Fragment>
   )

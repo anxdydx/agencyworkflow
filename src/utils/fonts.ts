@@ -4,8 +4,15 @@ import {
   Sansita,
   Lexend_Deca,
   Lexend_Giga,
-  Raleway
+  Raleway,
+  Quicksand
 } from "next/font/google";
+
+const quicksand = Quicksand({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-quicksand",
+});
 
 const raleway = Raleway({
   weight: ["400", "700"],
@@ -37,4 +44,4 @@ const lexendDeca = Lexend_Deca({
   variable: "--font-lexend-deca",
 });
 
-export { inter, poppins, sansita, lexendDeca , raleway};
+export { inter, poppins, sansita, lexendDeca , raleway, quicksand};
