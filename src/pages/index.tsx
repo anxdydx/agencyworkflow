@@ -32,7 +32,12 @@ const index = () => {
                 Naive optimism
               </h1>
               <hr className="w-24 float-right -rotate-45 border-black dark:border-white" />
-              <div className="image-pane mt-4">
+              <div className="image-pane mt-4 relative">
+                <div className="image-anchor h-8 w-4 -z-10 dark:bg-white absolute -top-3 -right-2 bg-black rotate-180" />
+                <div className="image-anchor h-8 w-4 -z-10 dark:bg-white absolute -top-3 -left-2 bg-black rotate-180" />
+                <div className="image-anchor h-8 w-4 -z-10 dark:bg-white absolute -bottom-3 -left-2 bg-black rotate-180" />
+                <div className="image-anchor h-8 w-4 -z-10 dark:bg-white absolute -bottom-3 -right-2 bg-black rotate-180" />
+
                 <img
                   data-aos="fade-up"
                   src="/important/shoots/something.jpg"
@@ -51,6 +56,8 @@ const index = () => {
             </div>
           </div>
           <div className="col-span-2 relative -z-30">
+            <hr className="w-24 float-right rotate-45 border-black dark:border-white" />
+
             <Image
               className=""
               src={'/important/shoots/image.jpg'}
@@ -60,6 +67,7 @@ const index = () => {
               data-aos="fade-down"
               data-aos-duration="1500"
             />
+            <hr className="w-24 - rotate-45 border-black dark:border-white" />
             <motion.h1
               initial={{opacity: 0}}
               animate={{opacity: 1}}
@@ -73,6 +81,9 @@ const index = () => {
           </div>
           <div className="col-span-2 max-xl:mt-4">
             <div className="video-pane w-inherit h-96 relative">
+              <div className="image-anchor h-8 w-4 dark:bg-white absolute -bottom-3 -left-2  bg-black rotate-180" />
+              <div className="image-anchor h-8 w-4 dark:bg-white absolute -top-3 -left-2  bg-black rotate-180" />
+              <div className="image-anchor h-8 w-4 dark:bg-white absolute -bottom-3 -right-2  bg-black rotate-180" />
               <img
                 src="/important/shoots/som.jpg"
                 alt=""
@@ -80,7 +91,7 @@ const index = () => {
                 data-aos-duration="2000"
                 className="absolute top-0 left-0 w-full h-full object-cover"
               />
-              <div className="image-anchor h-8 w-4 dark:bg-white absolute -top-3 -right-2 bg-black rotate-180" />
+              <div className="image-anchor h-8 w-4 -z-10 dark:bg-white absolute -top-3 -right-2 bg-black rotate-180" />
             </div>
             <div className="foot-pax-3d model h-inherit h-12 flex items-center justify-center">
               <motion.span
