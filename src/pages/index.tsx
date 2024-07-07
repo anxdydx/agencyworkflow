@@ -129,6 +129,17 @@ const index = () => {
           <IndexParallaxThree />
         </div>
       </section>
+      <section className="who-we-are mt-8 relative h-screen text-white ">
+        <Image
+          src="/images/textures/kitwave.jpg"
+          className="-z-20 absolute top-0 left-0 w-full h-full object-cover"
+          fill
+          alt=""
+        />
+        <div className="text-container px-12 py-8 inset-2">
+          <h1 className="text-5xl uppercase font-extrabold">What we do ?</h1>
+        </div>
+      </section>
     </React.Fragment>
   )
 }
