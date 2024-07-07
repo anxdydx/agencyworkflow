@@ -82,4 +82,82 @@ animation of pages behind
   height: 100vh;
   background: #0f0f0f;
   transform-origin: bottom;
+}
+
+/**
+    parallax animations 
+*/
+.parallax-container {
+  width: 100%;
+  height: 200vh;
+  margin-top: 10vh;
+  margin-bottom: 100vh;
+  position: relative;
+}
+.parallax-container .sticky {
+  position: sticky;
+  top: 0px;
+  overflow: hidden;
+  height: 100vh;
+}
+.parallax-container .sticky .element {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.parallax-container .sticky .element .image-component {
+  width: 25vw;
+  height: 25vh;
+  position: relative;
+}
+.parallax-container .sticky .element .image-component .image {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.parallax-container .sticky .element:nth-of-type(2) .image-component {
+  top: -30vh;
+  left: 6.5vw;
+  width: 20vw;
+  height: 35vh;
+  margin-bottom: 2rem;
+}
+.parallax-container .sticky .element:nth-of-type(3) .image-component {
+  top: -30vh;
+  right: 20vw;
+  width: 30vw;
+  height: 35vh;
+  margin-bottom: 2rem;
+}
+.parallax-container .sticky .element:nth-of-type(4) .image-component {
+  top: -25vh;
+  right: -28vw;
+  width: 20vw;
+  height: 45vh;
+  margin-bottom: 2rem;
+}
+.parallax-container .sticky .element:nth-of-type(5) .image-component {
+  top: 20vh;
+  left: -25vw;
+  width: 20vw;
+  height: 55vh;
+  margin-bottom: 2rem;
+}
+.parallax-container .sticky .element:nth-of-type(6) .image-component {
+  top: 32vh;
+  width: 25vw;
+  height: 28vh;
+  margin-bottom: 2rem;
+}
+.parallax-container .sticky .element:nth-of-type(7) .image-component {
+  top: 20vh;
+  left: 28vw;
+  width: 20vw;
+  height: 44.5vh;
+  margin-top: 1rem;
 }/*# sourceMappingURL=globals.css.map */

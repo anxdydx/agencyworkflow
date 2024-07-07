@@ -23,7 +23,7 @@ function SocialMediaIcons() {
           <img src="/important/signature-black.png" alt="" className="h-10 object-cover" />
         )}
       </ul>
-      <div className="icon-handler absolute bottom-4 p-3 py-4    dark:bg-white bg-black  text-black">
+      <div className="icon-handler fixed bottom-4 p-3 py-4    dark:bg-white bg-black  text-black">
         <ul className="flex gap-4 text-white dark:text-black flex-col text-xl ">
           <li className="list-style-none">
             <FaFacebookSquare />

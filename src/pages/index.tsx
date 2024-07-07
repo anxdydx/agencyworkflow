@@ -2,34 +2,8 @@ import {Button} from '@nextui-org/react'
 import Image from 'next/image'
 import React from 'react'
 import {motion} from 'framer-motion'
-import {lexendDeca, poppins, raleway} from '@/utils/fonts'
-
-const imagesArray = [
-  '/important/shoots/image.jpg',
-  '/important/shoots/image.jpg',
-  '/important/shoots/image.jpg',
-  '/important/shoots/image.jpg',
-  '/important/shoots/image.jpg',
-  '/important/shoots/image.jpg',
-  '/important/shoots/image.jpg',
-  '/important/shoots/image.jpg',
-  '/important/shoots/image.jpg',
-  '/important/shoots/image.jpg',
-  '/important/shoots/image.jpg',
-  '/important/shoots/image.jpg',
-]
-
-const ParallaxColumn = ({images}: {images: any}) => {
-  return (
-    <>
-      <div className="column">
-        {imagesArray.map((index, item) => {
-          return <Image src={index} alt="" className="image" key={item} width={200} height={200} />
-        })}
-      </div>
-    </>
-  )
-}
+import {lexendDeca, raleway} from '@/utils/fonts'
+import IndexParallaxThree from '@/utils/components/animated/IndexParallaxThree'
 
 const index = () => {
   const transitionValues = {
@@ -60,7 +34,7 @@ const index = () => {
               <hr className="w-24 float-right -rotate-45 border-black dark:border-white" />
               <div className="image-pane mt-4">
                 <img
-                data-aos="fade-up"
+                  data-aos="fade-up"
                   src="/important/shoots/something.jpg"
                   alt=""
                   className="w-full h-full object-cover light:hidden"
@@ -144,14 +118,16 @@ const index = () => {
               alt=""
             />
             <h1 className="text-8xl font-extrabold uppercase text-white" data-aos="fade-down">
-              The age of video editing
+              The realm of video editing
             </h1>
           </div>
         </div>
       </section>
 
-      <section className="video-editing-parallax parallax mt-4">
-        <div className="wrapper container"></div>
+      <section className="video-editing-parallax  mt-8">
+        <div className="wrapper container">
+          <IndexParallaxThree />
+        </div>
       </section>
     </React.Fragment>
   )
