@@ -36,9 +36,7 @@ export default function OnLoadModal(props: any) {
                 </p>
 
                 <p className="text-sm">
-                  So we were requesting you to add your personal recommendations for the improvement of
-                  your project if you are interested in. And if the improvement will be good then
-                  please share it with us, your name will be added into the top recommendators
+                  So we were requesting you to add your personal recommendations for the improvement in design if you are interested in?. And if the suggestion is accepted, your name will be added into the top recommendators.
                 </p>
 
                 <div className="inputs">
