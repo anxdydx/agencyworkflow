@@ -1,1 +1,3 @@
-export const schemaTypes = []
+import assets from './schemas/assets'
+
+export const schemaTypes = [assets]

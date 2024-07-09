@@ -8,9 +8,7 @@ export default defineConfig({
   title: 'agencyworkflow',
   projectId: '10rgxku1',
   dataset: 'production',
-
   plugins: [structureTool(), visionTool()],
-
   schema: {
     types: schemaTypes,
   },
