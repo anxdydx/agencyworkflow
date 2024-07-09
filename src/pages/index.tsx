@@ -19,19 +19,19 @@ const index = () => {
   }
   return (
     <React.Fragment>
-      <section className="min-xl:max-h-auto h-auto w-full max-xl:px-12">
+      <section className=" min-xl:max-h-auto h-auto w-full max-xl:px-12">
         <div className="grid grid-cols-6 container max-xl:grid-cols-1 max-xl:flex max-md:flex-col">
           <div className="col-span-2 mt-2">
             <div className="text-dialogue p-4 w-auto h-88 max-h-full">
-              <hr className="w-24 float-right -rotate-45 border-black dark:border-white" />
+              <hr className="w-24 float-right max-sm:hidden -rotate-45 border-black dark:border-white" />
               <h1
-                className={`${raleway.className} text-8xl pb-2  max-xl:mr-12  dark:mix-blend-normal uppercase  text-black font-extrabold dark:text-white`}
+                className={`${raleway.className} max-sm:text-6xl max-sm:font-font-extrabold text-8xl pb-2  max-xl:mr-12  dark:mix-blend-normal uppercase  text-black font-extrabold dark:text-white`}
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
                 Naive optimism
               </h1>
-              <hr className="w-24 float-right -rotate-45 border-black dark:border-white" />
+              <hr className="w-24 float-right  -rotate-45 border-black dark:border-white" />
               <div className="image-pane mt-4 relative">
                 <div className="image-anchor h-8 w-4 -z-10 dark:bg-white absolute -top-3 -right-2 bg-black rotate-180" />
                 <div className="image-anchor h-8 w-4 -z-10 dark:bg-white absolute -top-3 -left-2 bg-black rotate-180" />
@@ -45,19 +45,18 @@ const index = () => {
                   className="w-full h-full object-cover light:hidden"
                 />
               </div>
-              <div className="button-pane mt-4">
+              <div className="button-pane mt-4 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center">
                 <Button
-                  className="btn-one bg-none float-right bg-black text-white dark:bg-white dark:text-black rounded-none uppercase font-bold"
-                  size="lg"
+                  className="btn-one bg-none float-right bg-black text-white dark:bg-white dark:text-black max-sm:my-8 rounded-none  uppercase font-bold"
+                  size="md"
                 >
                   Meet your protagonist
                 </Button>
               </div>
             </div>
           </div>
-          <div className="col-span-2 relative -z-30">
+          <div className="max-sm:container col-span-2 relative  -z-30">
             <hr className="w-24 float-right rotate-45 border-black dark:border-white" />
-
             <Image
               className=""
               src={'/important/shoots/image.jpg'}
@@ -73,13 +72,13 @@ const index = () => {
               animate={{opacity: 1}}
               transition={{duration: 4}}
               className={`cursor-text ${lexendDeca.className} text-5xl absolute bottom-0 -right-12 font-bold max-xl:-right-8 
-              
+              max-md:text-3xl max-md:bottom-0 max-md:-right-4
               `}
             >
               PROTAGONIST
             </motion.h1>
           </div>
-          <div className="col-span-2 max-xl:mt-4">
+          <div className="col-span-2  max-xl:mt-4">
             <div className="video-pane w-inherit h-96 relative">
               <div className="image-anchor h-8 w-4 dark:bg-white absolute -bottom-3 -left-2  bg-black rotate-180" />
               <div className="image-anchor h-8 w-4 dark:bg-white absolute -top-3 -left-2  bg-black rotate-180" />
@@ -95,7 +94,8 @@ const index = () => {
             </div>
             <div className="foot-pax-3d model h-inherit h-12 flex items-center justify-center">
               <motion.span
-                className="rounded-full bg-black dark:bg-white w-[8rem] h-[8rem]"
+                // maybe i would change it further ball-hidden-query
+                className="rounded-full max-sm:hidden  bg-black dark:bg-white w-[8rem] h-[8rem]"
                 style={ballStyle}
                 transition={{
                   ease: 'easeOut',
@@ -114,9 +114,9 @@ const index = () => {
         </div>
       </section>
       <br />
-      <section className="video-editing-parallax  max-h-screen flex items-center justify-center mt-4 ">
+      <section className="video-editing-parallax-banner  max-h-screen flex items-center justify-center mt-4 ">
         <div className="wrapper relative h-inherit">
-          <div className="text-texture absolute -top-4 -right-2  bg-black p-4">
+          <div className="text-texture absolute -top-4 -right-2 max-md:right-0  bg-black p-4">
             <h1 className="text-5xl font-extrabold text-white">#1</h1>
           </div>
 
@@ -128,7 +128,10 @@ const index = () => {
               className="absolute top-0 left-0 w-full h-full object-cover -z-20"
               alt=""
             />
-            <h1 className="text-8xl font-extrabold uppercase text-white" data-aos="fade-down">
+            <h1
+              className="text-8xl font-extrabold max-sm:text-4xl uppercase text-white"
+              data-aos="fade-down"
+            >
               The realm of video editing
             </h1>
           </div>
@@ -140,14 +143,10 @@ const index = () => {
           <IndexParallaxThree />
         </div>
       </section>
-      <section className="h-auto py-6 w-full text-center items-center justify-center bg-black dark:bg-white">
-        <h1 className="text-6xl font-extrabold uppercase text-white dark:text-black">
-          Personal brand management
-        </h1>
-      </section>
-      <section className="who-we-are container  mt-8 relative h-screen ">
+     
+      <section className="who-we-are container  mt-8 relative h-auto">
         <div className="pointer-circle w-12 h-12 absoute mb-2  top-0 left-0 bg-black dark:bg-white" />
-        <div className="grid grid-cols-6">
+        <div className="grid grid-cols-6 max-md:grid-cols-1 max-md:flex max-md:flex-col px-6">
           <div className="col-span-4">
             <div className="text-pane">
               <h1 className="uppercase text-5xl font-extrabold">About agenflow</h1>
@@ -184,8 +183,8 @@ const index = () => {
         </div>
       </section>
       <br />
-    
-      <section className='3d models'>
+
+      <section className="3d models">
         <h1>Attractive 3d models to build</h1>
       </section>
     </React.Fragment>
