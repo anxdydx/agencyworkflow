@@ -36,7 +36,9 @@ export default function OnLoadModal(props: any) {
                 </p>
 
                 <p className="text-sm">
-                  So we were requesting you to add your personal recommendations for the improvement in design if you are interested in?. And if the suggestion is accepted, your name will be added into the top recommendators.
+                  So we were requesting you to add your personal recommendations for the improvement
+                  in design if you are interested in?. And if the suggestion is accepted, your name
+                  will be added into the top recommendators.
                 </p>
 
                 <div className="inputs">
@@ -44,11 +46,14 @@ export default function OnLoadModal(props: any) {
                 </div>
               </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
+                <Button className="text-black dark:text-white" variant="light" onPress={onClose}>
                   Close
                 </Button>
-                <Button color="primary" onPress={onClose}>
-                  Action
+                <Button
+                  className="rounded-none bg-black text-white dark:bg-white dark:text-black"
+                  size="sm"
+                >
+                  Submit &rarr;
                 </Button>
               </ModalFooter>
             </>
