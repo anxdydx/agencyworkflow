@@ -11,6 +11,7 @@ import {useEffect} from 'react'
 import {useTheme} from 'next-themes'
 import {useRouter} from 'next/router'
 import {motion, AnimatePresence} from 'framer-motion'
+import OnLoadModal from '@/utils/onloadbanner'
 
 function SocialMediaIcons() {
   const {theme} = useTheme()
@@ -81,9 +82,14 @@ export default function App({Component, pageProps: {session, ...pageProps}}: App
                 exit={{scaleY: 0}}
                 transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
               >
-              {/* graffiti */}
+                {/* graffiti */}
               </motion.div>
             </motion.div>
+            {typeof window !== 'undefined' &&
+              !session &&
+              !localStorage.getItem('onLoadModalViewed') && (
+                <OnLoadModal closeOn={() => localStorage.setItem('onLoadModalViewed', 'true')} />
+              )}
           </AnimatePresence>
         </RootProvider>
       </SessionProvider>
