@@ -20,7 +20,7 @@ const index = () => {
   return (
     <React.Fragment>
       <section className=" min-xl:max-h-auto h-auto w-full max-xl:px-12">
-        <div className="grid grid-cols-6 container max-xl:grid-cols-1 max-xl:flex max-md:flex-col">
+        <div className="grid grid-cols-6 container max-xl:grid-cols-1 max-xl:flex max-xl:flex-col">
           <div className="col-span-2 mt-2">
             <div className="text-dialogue p-4 w-auto h-88 max-h-full">
               <hr className="w-24 float-right max-sm:hidden -rotate-45 border-black dark:border-white" />
@@ -55,10 +55,10 @@ const index = () => {
               </div>
             </div>
           </div>
-          <div className="max-sm:container col-span-2 relative  -z-30">
+          <div className="max-sm:container col-span-2 max-md:flex max-md:items-center max-md:justify-center relative  -z-30">
             <hr className="w-24 float-right rotate-45 border-black dark:border-white" />
             <Image
-              className=""
+              className="m-auto  max-xl:hidden max-md:block"
               src={'/important/shoots/image.jpg'}
               width={400}
               height={600}
@@ -114,9 +114,9 @@ const index = () => {
         </div>
       </section>
       <br />
-      <section className="video-editing-parallax-banner  max-h-screen flex items-center justify-center mt-4 ">
+      <section className="video-editing-parallax-banner   max-h-screen flex items-center justify-center mt-4 ">
         <div className="wrapper relative h-inherit">
-          <div className="text-texture absolute -top-4 -right-2 max-md:right-0  bg-black p-4">
+          <div className="text-texture absolute -top-4 -right-2 max-md:right-0 z-20  bg-black p-4">
             <h1 className="text-5xl font-extrabold text-white">#1</h1>
           </div>
 
@@ -129,7 +129,7 @@ const index = () => {
               alt=""
             />
             <h1
-              className="text-8xl font-extrabold max-sm:text-4xl uppercase text-white"
+              className="text-8xl font-extrabold max-md:mt-12 max-sm:text-4xl uppercase text-white"
               data-aos="fade-down"
             >
               The realm of video editing

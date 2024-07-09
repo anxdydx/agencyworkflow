@@ -56,7 +56,7 @@ export default function App({Component, pageProps: {session, ...pageProps}}: App
     <>
       <SessionProvider session={session}>
         <RootProvider>
-          <AnimatePresence mode='wait'>
+          <AnimatePresence mode="wait">
             <motion.div
               key={router.pathname}
               className={`${inter.className} `}
@@ -66,19 +66,23 @@ export default function App({Component, pageProps: {session, ...pageProps}}: App
               <Component {...pageProps} />
               <SocialMediaIcons />
               <motion.div
-                className="slide-in"
+                className="slide-in dark:bg-white"
                 initial={{scaleY: 0}}
                 animate={{scaleY: 0}}
                 exit={{scaleY: 1}}
                 transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
-              />
+              >
+                {/* graffiti */}
+              </motion.div>
               <motion.div
-                className="slide-out"
+                className="slide-out dark:bg-white"
                 initial={{scaleY: 1}}
-                animate={{scaleY:0}}
+                animate={{scaleY: 0}}
                 exit={{scaleY: 0}}
                 transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
-               />
+              >
+              {/* graffiti */}
+              </motion.div>
             </motion.div>
           </AnimatePresence>
         </RootProvider>
