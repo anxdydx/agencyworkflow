@@ -143,7 +143,7 @@ const index = () => {
           <IndexParallaxThree />
         </div>
       </section>
-     
+
       <section className="who-we-are container  mt-8 relative h-auto">
         <div className="pointer-circle w-12 h-12 absoute mb-2  top-0 left-0 bg-black dark:bg-white" />
         <div className="grid grid-cols-6 max-md:grid-cols-1 max-md:flex max-md:flex-col px-6">
@@ -184,8 +184,20 @@ const index = () => {
       </section>
       <br />
 
-      <section className="3d models">
+      <section className="container 3d models h-[40vh]">
         <h1>Attractive 3d models to build</h1>
+      </section>
+
+      <section className="container ninja-style-revealing-page h-[70vh] flex justify-between items-center max-md:flex-col">
+        <div className="">
+          <div className='w-4 h-12 bg-black dark:bg-white'/>
+        </div>
+        <div className="flex justify-between ">
+          <div className='w-24 h-24 rounded-full  bg-black dark:bg-white' />
+        </div>
+        <div className="flex justify-between ">
+          <div  className='w-4 h-12 bg-black dark:bg-white'>03</div>
+        </div>
       </section>
     </React.Fragment>
   )
