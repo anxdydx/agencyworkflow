@@ -3,17 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "main": "package.json",
-  "license": "UNLICENSED",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "sanitydev": "sanity dev",
-    "sanitystart": "sanity start",
-    "sanitybuild": "sanity build",
-    "sanitydeploy": "sanity deploy",
-    "sanity-deploy-graphql": "sanity graphql deploy"
+    "lint": "next lint"
   },
   "dependencies": {
     "@nextui-org/react": "^2.4.2",
