@@ -3,8 +3,8 @@ import {useRouter} from 'next/router'
 import React from 'react'
 
 const testimonials = (props: any) => {
-  const router = useRouter()
-  console.log(router.defaultLocale)
+  const {pathname} = useRouter()
+  console.log(pathname)
   return <div>testimonials {props.response}</div>
 }
 
