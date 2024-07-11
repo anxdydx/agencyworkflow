@@ -4,6 +4,7 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import {lexendDeca, quicksand, raleway} from '@/utils/fonts'
 import IndexParallaxThree from '@/utils/components/animated/IndexParallaxThree'
+import Head from 'next/head'
 
 const index = () => {
   const transitionValues = {
@@ -19,6 +20,12 @@ const index = () => {
   }
   return (
     <React.Fragment>
+      <Head>
+        <title>Agenflow. Inc</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Home | Agenflow" />
+        <link rel="manifest" href="/manifest.json" />
+      </Head>
       <section className=" min-xl:max-h-auto h-auto w-full max-xl:px-12">
         <div className="grid grid-cols-6 container max-xl:grid-cols-1 max-xl:flex max-xl:flex-col">
           <div className="col-span-2 mt-2">
@@ -190,14 +197,21 @@ const index = () => {
 
       <section className="container ninja-style-revealing-page h-[70vh] flex justify-between items-center max-md:flex-col">
         <div className="">
-          <div className='w-4 h-12 bg-black dark:bg-white'/>
+          <div className="w-4 h-12 bg-black dark:bg-white" />
         </div>
         <div className="flex justify-between ">
-          <div className='w-24 h-24 rounded-full  bg-black dark:bg-white' />
+          <div className="w-24 h-24 rounded-full  bg-black dark:bg-white" />
         </div>
         <div className="flex justify-between ">
-          <div  className='w-4 h-12 bg-black dark:bg-white'>03</div>
+          <div className="w-4 h-12 bg-black dark:bg-white">03</div>
         </div>
+      </section>
+      <section className="why-choose-us h-[80vh] flex justify-between items-center max-md:flex-col relative">
+        <img
+          src="/svg/wave image.svg"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          alt=""
+        />
       </section>
     </React.Fragment>
   )
