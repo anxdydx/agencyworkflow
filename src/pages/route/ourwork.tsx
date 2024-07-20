@@ -11,7 +11,7 @@ const ourwork = () => {
             className={`${manrope.className} text-7xl font-bold 
         `}
           >
-            "Creativity is intelligence, <br /> - Have fun with it"
+            Creativity is intelligence, <br /> - Have fun with it
           </h1>
           <span className="text-3xl font-medium mt-8 float-right">
             {' '}
