@@ -69,7 +69,7 @@ animation of pages behind
   height: 100vh;
   background: #0f0f0f;
   overflow: hidden;
-  transform-origin: bottom;
+  transform-origin: top;
   z-index: 100;
 }
 .slide-out {
@@ -80,7 +80,7 @@ animation of pages behind
   width: 100%;
   height: 100vh;
   background: #0f0f0f;
-  transform-origin: bottom;
+  transform-origin: left;
 }
 
 /**

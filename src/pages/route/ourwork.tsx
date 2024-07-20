@@ -26,9 +26,6 @@ const ourwork = () => {
         />
       </section>
 
-      <section className="h-[90vh]"></section>
-      <section className="h-[90vh]"></section>
-      <section className="h-[90vh]"></section>
     </main>
   )
 }

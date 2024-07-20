@@ -1,6 +1,6 @@
 import '@/sass/out/globals.css'
 import SharedNavbar from '@/utils/components/shared/SharedNavbar'
-import {inter} from '@/utils/fonts'
+import {inter, manrope} from '@/utils/fonts'
 import RootProvider from '@/utils/providers/RootProvider'
 import {SessionProvider} from 'next-auth/react'
 import type {AppProps} from 'next/app'
@@ -67,22 +67,23 @@ export default function App({Component, pageProps: {session, ...pageProps}}: App
               <Component {...pageProps} />
               <SocialMediaIcons />
               <motion.div
-                className="slide-in dark:bg-white"
+                className="slide-in dark:bg-white flex flex-col text-center items-center justify-center"
                 initial={{scaleY: 0}}
                 animate={{scaleY: 0}}
                 exit={{scaleY: 1}}
                 transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
               >
-                {/* graffiti */}
+                <h1 className={`${manrope.className} dark:text-black text-white font-semibold text-6xl`}>Agenflow.</h1>
               </motion.div>
+
               <motion.div
-                className="slide-out dark:bg-white"
-                initial={{scaleY: 1}}
-                animate={{scaleY: 0}}
-                exit={{scaleY: 0}}
+                className="slide-out dark:bg-white flex flex-col text-center items-center justify-center"
+                initial={{scaleX: 1}}
+                animate={{scaleX: [0.34, 0]}}
+                exit={{scaleX: 1}}
                 transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
-              >
-                {/* graffiti */}
+                >
+                <h1  className={`${manrope.className} dark:text-black text-white font-semibold text-6xl `}>Agenflow.</h1>
               </motion.div>
             </motion.div>
             {typeof window !== 'undefined' &&
