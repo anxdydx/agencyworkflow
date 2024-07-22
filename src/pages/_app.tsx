@@ -79,7 +79,7 @@ export default function App({Component, pageProps: {session, ...pageProps}}: App
               <motion.div
                 className="slide-out dark:bg-white flex flex-col text-center items-center justify-center"
                 initial={{scaleX: 1}}
-                animate={{scaleX: [0.34, 0]}}
+                animate={{scaleX: [0.4, 0]}}
                 exit={{scaleX: 1}}
                 transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
                 >

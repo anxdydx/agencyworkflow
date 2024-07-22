@@ -2,7 +2,7 @@ import {Button} from '@nextui-org/react'
 import Image from 'next/image'
 import React from 'react'
 import {motion} from 'framer-motion'
-import {lexendDeca, quicksand, raleway} from '@/utils/fonts'
+import {lexendDeca, manrope, quicksand, raleway} from '@/utils/fonts'
 import IndexParallaxThree from '@/utils/components/animated/IndexParallaxThree'
 import Head from 'next/head'
 
@@ -73,13 +73,14 @@ const index = () => {
               data-aos="fade-down"
               data-aos-duration="1500"
             />
+
             <hr className="w-24 - rotate-45 border-black dark:border-white" />
+
             <motion.h1
               initial={{opacity: 0}}
               animate={{opacity: 1}}
               transition={{duration: 4}}
-              className={`cursor-text ${lexendDeca.className} text-5xl absolute bottom-0 -right-12 font-bold max-xl:-right-8 
-              max-md:text-3xl max-md:bottom-0 max-md:-right-4
+              className={`cursor-text ${lexendDeca.className} text-5xl absolute bottom-0 -right-12 font-bold max-xl:-right-8 max-md:text-3xl max-md:bottom-0 max-md:-right-4 dark:bg-white dark:text-black bg-black text-white 
               `}
             >
               PROTAGONIST
@@ -99,8 +100,8 @@ const index = () => {
               />
               <div className="image-anchor h-8 w-4 -z-10 dark:bg-white absolute -top-3 -right-2 bg-black rotate-180" />
             </div>
-            <div className="foot-pax-3d model h-inherit h-12 flex items-center justify-center">
-              <motion.span
+            <div className="foot-pax-3d model h-inherit h-12 flex flex-col text-center items-center justify-center">
+              {/* <motion.span
                 // maybe i would change it further ball-hidden-query
                 className="rounded-full max-sm:hidden  bg-black dark:bg-white w-[8rem] h-[8rem]"
                 style={ballStyle}
@@ -115,7 +116,9 @@ const index = () => {
                   width: ['8rem', '5rem', '3rem'],
                   height: ['8rem', '5rem', '2rem'],
                 }}
-              />
+              /> */}
+
+              {/* <div className='text-6xl font-bold'>は</div> */}
             </div>
           </div>
         </div>
@@ -206,12 +209,63 @@ const index = () => {
           <div className="w-4 h-12 bg-black dark:bg-white">03</div>
         </div>
       </section>
-      <section className="why-choose-us h-[80vh] flex justify-between items-center max-md:flex-col relative">
-        <img
-          src="/svg/wave image.svg"
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          alt=""
-        />
+      <section className="our-work-set h-[80vh] relative p-8 ">
+        <h1 className="text-center text-4xl font-bold ">Our workset</h1>
+        <div className=" grid grid-cols-3 max-md:grid-cols-1 max-md:grid-rows-3 mt-4 gap-3">
+          <div className="bg-black text-white dark:bg-white dark:text-black p-6">
+            <h1 className="font-bold text-2xl">Video editing</h1>
+            <p className={`${manrope.className} mt-3 font-light`}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt cupiditate, voluptates
+              iste ratione amet suscipit accusamus eum asperiores tempora tenetur, quisquam deleniti
+              maxime vero velit aspernatur consectetur molestias laboriosam aliquid.
+            </p>
+            <div className="imagery-pane mt-4 relative h-[20rem] w-full bg-cyan-500">
+              <img
+                src="/important/shoots/cam.jpg"
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="bg-black text-white dark:bg-white dark:text-black p-6">
+            <h1 className="font-bold text-2xl">Personal Brand.</h1>
+            <p className={`${manrope.className} mt-3 font-light`}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt cupiditate, voluptates
+              iste ratione amet suscipit accusamus eum asperiores tempora tenetur, quisquam deleniti
+              maxime vero velit aspernatur consectetur molestias laboriosam aliquid.
+            </p>
+            <div className="imagery-pane mt-4 relative h-[20rem] w-full bg-cyan-500">
+              <img
+                src="/important/shoots/cam.jpg"
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="bg-black text-white dark:bg-white dark:text-black p-6">
+            <h1 className="font-bold text-2xl">Online presence</h1>
+            <p className={`${manrope.className} mt-3 font-light`}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt cupiditate, voluptates
+              iste ratione amet suscipit accusamus eum asperiores tempora tenetur, quisquam deleniti
+              maxime vero velit aspernatur consectetur molestias laboriosam aliquid.
+            </p>
+            <div className="imagery-pane mt-4 relative h-[20rem] w-full bg-cyan-500">
+              <img
+                src="/important/shoots/cam.jpg"
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div className="detailed-explaination mt-6 m-auto  bg-black ">
+          
+          
+          <Button className="bg-black text-white dark:bg-white dark:text-black text-center ">
+            Get detail info.
+          </Button>
+
+        </div>
       </section>
     </React.Fragment>
   )

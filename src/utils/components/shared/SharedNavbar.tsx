@@ -1,5 +1,5 @@
-import { AcmeLogo } from "@/utils/constants";
-import { poppins } from "@/utils/fonts";
+import {AcmeLogo} from '@/utils/constants'
+import {poppins} from '@/utils/fonts'
 import {
   Navbar,
   NavbarBrand,
@@ -10,47 +10,49 @@ import {
   NavbarMenu,
   Tooltip,
   Switch,
-} from "@nextui-org/react";
-import React from "react";
-import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
-import { useTheme } from "next-themes";
-import { GoHome, GoRepoPush, GoSmiley, GoIssueTracks } from "react-icons/go";
-import { motion } from "framer-motion";
-import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi";
-import { AiFillSmile } from "react-icons/ai";
+} from '@nextui-org/react'
+import React from 'react'
+import Link from 'next/link'
+import {FaArrowRight} from 'react-icons/fa'
+import {useTheme} from 'next-themes'
+import {GoHome, GoRepoPush, GoSmiley, GoIssueTracks} from 'react-icons/go'
+import {motion, useScroll} from 'framer-motion'
+import {HiOutlineMoon, HiOutlineSun} from 'react-icons/hi'
+import {AiFillSmile} from 'react-icons/ai'
 
 const ChangeTheme = () => {
-  const { setTheme, theme } = useTheme();
+  const {setTheme, theme} = useTheme()
   return (
     <Button
       size="sm"
       isIconOnly
       className="    shadow-md text-white"
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
     >
-      {theme === "light" ? (
+      {theme === 'light' ? (
         <HiOutlineSun className="text-lg text-black" />
       ) : (
         <HiOutlineMoon className="text-lg" />
       )}
     </Button>
-  );
-};
+  )
+}
 
 const ViewWorkPane = () => {
-  const [viewOnclick, setViewOnclick] = React.useState(false);
+  const [viewOnclick, setViewOnclick] = React.useState(false)
   return (
     <React.Fragment>
-       <motion.div className={`${viewOnclick ? "block" : "hidden"} fixed  h-screen w-full bg-rose-500`}>
-          Jack im here
-        </motion.div>
+      <motion.div
+        className={`${viewOnclick ? 'block' : 'hidden'} fixed  h-screen w-full bg-rose-500`}
+      >
+        Jack im here
+      </motion.div>
       <Tooltip
         content="Our projects"
         showArrow
         classNames={{
           content: [
-            "bg-gradient-to-r from-white to-gray-800 text-white animation-pulse font-semibold ",
+            'bg-gradient-to-r from-white to-gray-800 text-white animation-pulse font-semibold ',
           ],
         }}
       >
@@ -63,33 +65,27 @@ const ViewWorkPane = () => {
           <AiFillSmile className="text-lg text-white" />
         </Button>
       </Tooltip>
-       
     </React.Fragment>
-  );
-};
+  )
+}
 
 const SharedNavbar = () => {
-  const { setTheme, theme } = useTheme();
+  const {setTheme, theme} = useTheme()
+  const {scrollYProgress} = useScroll()
   const navigateLink = [
-    { name: "Home", href: "/", icon: <GoHome /> },
-    { name: "Our work", href: "/route/ourwork", icon: <GoIssueTracks /> },
-    { name: "Our services", href: "/route/ourservices", icon: <GoRepoPush /> },
-    { name: "Testimonials", href: "/route/testimonials", icon: <GoSmiley /> },
-    { name: "Download brochure", href: "/", icon: <FaArrowRight /> },
-  ];
+    {name: 'Home', href: '/', icon: <GoHome />},
+    {name: 'Our work', href: '/route/ourwork', icon: <GoIssueTracks />},
+    {name: 'Our services', href: '/route/ourservices', icon: <GoRepoPush />},
+    {name: 'Testimonials', href: '/route/testimonials', icon: <GoSmiley />},
+    {name: 'Download brochure', href: '/', icon: <FaArrowRight />},
+  ]
   return (
-    <React.Fragment>
-      <Navbar
-        position="sticky"
-        className="bg-transparent "
-        isBlurred={false}
-      >
+    <motion.div  >
+      <Navbar shouldHideOnScroll position="sticky" className="bg-transparent " isBlurred={false}>
         <NavbarMenuToggle className="hidden max-[1100px]:block" />
         <NavbarBrand className="mt-1">
           <AcmeLogo />
-          <p className={`${poppins.className} font-medium text-inherit`}>
-            Agenflow.
-          </p>
+          <p className={`${poppins.className} font-medium text-inherit`}>Agenflow.</p>
         </NavbarBrand>
         <NavbarContent className="mt-1 max-[1100px]:hidden" justify="center">
           {navigateLink.map((items) => {
@@ -99,11 +95,10 @@ const SharedNavbar = () => {
                   className={`${poppins.className} text-sm font-medium text-inherit dark:text-gray-300 light:text-gray-800 flex flex-row gap-x-1 text-center items-center group/text underline-hover`}
                   href={items.href}
                 >
-                  {items.name}{" "}
-                  <span className="font-medium mx-[0.2px]">{items.icon}</span>
+                  {items.name} <span className="font-medium mx-[0.2px]">{items.icon}</span>
                 </Link>
               </NavbarItem>
-            );
+            )
           })}
         </NavbarContent>
         <NavbarContent justify="end">
@@ -116,34 +111,34 @@ const SharedNavbar = () => {
                       className={`${poppins.className} text-sm font-medium text-inherit dark:text-gray-300 light:text-gray-800 flex flex-row gap-x-1 text-center items-center group/text underline-hover  my-2`}
                       href={items.href}
                     >
-                      {items.name}{" "}
-                      <span className="font-medium mx-[0.2px]">
-                        {items.icon}
-                      </span>
+                      {items.name} <span className="font-medium mx-[0.2px]">{items.icon}</span>
                     </Link>
                   </NavbarItem>
-                );
+                )
               })}
             </div>
           </NavbarMenu>
-          <div className="theme-change">
-            {/* //workpane modal */}
-          </div>
+          <div className="theme-change">{/* //workpane modal */}</div>
           <div className="switch">
-            <Switch size="sm" color="default" classNames={{ label: "text-white" }} onClick={() => setTheme(theme === "light" ? "dark" : "light")} />
+            <Switch
+              size="sm"
+              color="default"
+              classNames={{label: 'text-white'}}
+              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            />
           </div>
           <div className="onboarder">
             <Button
-            className="rounded-none bg-black text-white dark:bg-white dark:text-black"
-            size="sm"
+              className="rounded-none bg-black text-white dark:bg-white dark:text-black"
+              size="sm"
             >
               Get in touch &rarr;
             </Button>
           </div>
         </NavbarContent>
       </Navbar>
-    </React.Fragment>
-  );
-};
+    </motion.div>
+  )
+}
 
-export default SharedNavbar;
+export default SharedNavbar
