@@ -11,7 +11,7 @@ import {
   Tooltip,
   Switch,
 } from '@nextui-org/react'
-import React from 'react'
+import React, {useEffect} from 'react'
 import Link from 'next/link'
 import {FaArrowRight} from 'react-icons/fa'
 import {useTheme} from 'next-themes'
@@ -71,7 +71,17 @@ const ViewWorkPane = () => {
 
 const SharedNavbar = () => {
   const {setTheme, theme} = useTheme()
-  const {scrollYProgress} = useScroll()
+  const [scrollY, setScrollY] = React.useState(0)
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY)
+    }
+    handleScroll()
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   const navigateLink = [
     {name: 'Home', href: '/', icon: <GoHome />},
     {name: 'Our work', href: '/route/ourwork', icon: <GoIssueTracks />},
@@ -80,8 +90,8 @@ const SharedNavbar = () => {
     {name: 'Download brochure', href: '/', icon: <FaArrowRight />},
   ]
   return (
-    <motion.div  >
-      <Navbar shouldHideOnScroll position="sticky" className="bg-transparent " isBlurred={false}>
+    <motion.div>
+      <Navbar shouldHideOnScroll className={`${scrollY > 50 ? ' fixed bg-black text-white border-b border-gray-900' : ''}`} isBlurred={false}>
         <NavbarMenuToggle className="hidden max-[1100px]:block" />
         <NavbarBrand className="mt-1">
           <AcmeLogo />
@@ -92,7 +102,7 @@ const SharedNavbar = () => {
             return (
               <NavbarItem key={items.name}>
                 <Link
-                  className={`${poppins.className} text-sm font-medium text-inherit dark:text-gray-300 light:text-gray-800 flex flex-row gap-x-1 text-center items-center group/text underline-hover`}
+                  className={`${poppins.className} text-sm font-medium text-inherit  flex flex-row gap-x-1 text-center items-center group/text underline-hover `}
                   href={items.href}
                 >
                   {items.name} <span className="font-medium mx-[0.2px]">{items.icon}</span>

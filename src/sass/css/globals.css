@@ -147,6 +147,16 @@ animation of pages behind
   transform-origin: left;
 }
 
+.text-pane {
+  background: blue;
+  width: 100%;
+  height: 100%;
+}
+.text-pane .text-aboute-agenflow {
+  position: sticky;
+  top: 3;
+}
+
 /**
     parallax animations 
 */
