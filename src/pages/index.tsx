@@ -258,10 +258,10 @@ const index = () => {
             </div>
           </div>
         </div>
-        <div className="detailed-explaination mt-6 m-auto  bg-black ">
+        <div className="detailed-explaination mt-6 m-auto flex items-center   bg-black ">
           
           
-          <Button className="bg-black text-white dark:bg-white dark:text-black text-center ">
+          <Button className="bg-black text-white dark:bg-white dark:text-black text-center w-full rounded-none hover:bg-white hover:text-black ">
             Get detail info.
           </Button>
 
