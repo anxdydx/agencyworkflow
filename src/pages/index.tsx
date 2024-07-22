@@ -267,6 +267,7 @@ const index = () => {
 
         </div>
       </section>
+      <section className="footer"></section>
     </React.Fragment>
   )
 }

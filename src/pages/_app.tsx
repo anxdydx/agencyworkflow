@@ -13,6 +13,7 @@ import {useRouter} from 'next/router'
 import {motion, AnimatePresence} from 'framer-motion'
 import OnLoadModal from '@/utils/onloadbanner'
 
+
 function SocialMediaIcons() {
   const {theme} = useTheme()
   return (
